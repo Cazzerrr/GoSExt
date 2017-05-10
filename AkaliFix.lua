@@ -2,7 +2,7 @@ if myHero.charName ~= "Akali" then return end
 
 require("DamageLib")
 
-PrintChat("Cazza's Akali Fix Loaded | Current orbwalker: "..CurrentOrbName())")
+PrintChat("Cazza's Akali Fix Loaded.")
 local TickH, TickL = 0, 0
 
 local _AllyHeroes
@@ -85,15 +85,7 @@ function GetItemSlot(unit, id)
   end
   return 0 -- 
 end
-local CurrentOrbName = function()
-        local orb
-        if _G.SDK then
-        	orb = "IC's Orbwalker"
-        elseif _G.Orbwalker then
-        	orb = "Noddy's Orbwalker, I recommend using IC's Orbwalker"
-        end
-        return orb
-end
+
 function GetBuffData(unit, buffname)
   for i = 0, unit.buffCount do
     local buff = unit:GetBuff(i)
@@ -255,7 +247,7 @@ Config.Combo.E:MenuElement({name = "Enabled", id = "Enabled", value = true})
 
 Config.Combo:MenuElement({type = MENU, name = "Shadow Dance (R)", id = "R", leftIcon = "http://static.lolskill.net/img/abilities/64/AkaliShadowDance.png"})
 Config.Combo.R:MenuElement({name = "Enabled", id = "Enabled", value = true})
-Config.Combo:MenuElement({type = MENU, name = "Ignite to kill?", id = "Ignite"})
+Config.Combo:MenuElement({type = MENU, name = "Ignite to kill?", id = "Ignite" , leftIcon = "http://i.imgur.com/c5Aoc9v.jpg"})
 Config.Combo.Ignite:MenuElement({name = "Enabled", id = "Enabled", value = true})
 Config.Combo.R:MenuElement({name = "Turret Check", id = "Turret", value = true})
 Config.Combo.R:MenuElement({type = MENU, name = "GapClose Settings", id = "GapClose"})
@@ -312,11 +304,11 @@ Config.Key:MenuElement({id = "LastHitAuto", name = "Auto LastHit Q", key = strin
 
 Config:MenuElement({type = MENU, id = "Items", name = "Item Settings"})
 
-Config.Items:MenuElement({type = MENU, id = "useGun", name = "Hextech Gunblade"})
+Config.Items:MenuElement({type = MENU, id = "useGun", name = "Hextech Gunblade", leftIcon = "http://i.imgur.com/MOImtq7.jpg"})
 Config.Items.useGun:MenuElement({name = "Enabled", id = "Enabled", value = true})
-Config.Items:MenuElement({type = MENU, id = "useCut", name = "Bilgewater Cutlass"})
+Config.Items:MenuElement({type = MENU, id = "useCut", name = "Bilgewater Cutlass", leftIcon = "http://i.imgur.com/2gXYWvs.png"})
 Config.Items.useCut:MenuElement({name = "Enabled", id = "Enabled", value = true})
-Config.Items:MenuElement({type = MENU, id = "Zhonya", name = "Use Zhonya"})
+Config.Items:MenuElement({type = MENU, id = "Zhonya", name = "Use Zhonya", leftIcon = "http://i.imgur.com/YdsxCnx.png"})
 Config.Items.Zhonya:MenuElement({name = "Enabled", id = "Enabled", value = true})
 
 -- DRAW
