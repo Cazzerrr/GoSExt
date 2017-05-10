@@ -2,7 +2,7 @@ if myHero.charName ~= "Akali" then return end
 
 require("DamageLib")
 
-PrintChat("Cazza's Akali Fix Loaded.| Current orbwalker: "..CurrentOrbName())")
+PrintChat("Cazza's Akali Fix Loaded | Current orbwalker: "..CurrentOrbName())")
 local TickH, TickL = 0, 0
 
 local _AllyHeroes
