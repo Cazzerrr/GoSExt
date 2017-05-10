@@ -2,7 +2,7 @@ if myHero.charName ~= "Akali" then return end
 
 require("DamageLib")
 
-PrintChat("Cazza's Akali Fix Loaded.")
+PrintChat("Cazza's Akali Fix Loaded.| Current orbwalker: "..CurrentOrbName())")
 local TickH, TickL = 0, 0
 
 local _AllyHeroes
@@ -85,7 +85,15 @@ function GetItemSlot(unit, id)
   end
   return 0 -- 
 end
-
+local CurrentOrbName = function()
+        local orb
+        if _G.SDK then
+        	orb = "IC's Orbwalker"
+        elseif _G.Orbwalker then
+        	orb = "Noddy's Orbwalker, I recommend using IC's Orbwalker"
+        end
+        return orb
+end
 function GetBuffData(unit, buffname)
   for i = 0, unit.buffCount do
     local buff = unit:GetBuff(i)
