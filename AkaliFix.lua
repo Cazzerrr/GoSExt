@@ -520,7 +520,7 @@ function AutoLastHit()
 end
 
 function SwitchHarass()
-        if Config.Key.HarassAuto:Value() then
+        if Config.Key.HarassAuto:Value() and Game.IsChatOpen() == false then
                 if TickH+200 < GetTickCount() then
                         if Config.Harass.Q.Auto.Enabled:Value() == true then
                                 Config.Harass.Q.Auto.Enabled:Value(false)
@@ -533,7 +533,7 @@ function SwitchHarass()
 end
 
 function SwitchLastHit()
-        if Config.Key.LastHitAuto:Value() then
+        if Config.Key.LastHitAuto:Value() and Game.IsChatOpen() == false then
                 if TickL+200 < GetTickCount() then
                         if Config.LastHit.Q.Auto.Enabled:Value() == true then
                                 Config.LastHit.Q.Auto.Enabled:Value(false)
