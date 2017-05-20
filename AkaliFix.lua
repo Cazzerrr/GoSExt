@@ -405,6 +405,8 @@ end
 function Ready(spell)
 	return myHero:GetSpellData(spell).currentCd == 0 and myHero:GetSpellData(spell).level > 0 and myHero:GetSpellData(spell).mana <= myHero.mana
 end
+
+
 function Combo(target)
         if Config.Key.Combo:Value() then
 				if Config.Combo.E.Enabled:Value() and Ready(_E) and IsValidTarget(target, GetRange(_W), false, myHero.pos) then
@@ -566,5 +568,5 @@ function OnDraw()
 		end
 		if Config.Draw.DrawR:Value() then
 			Draw.Circle(myHero.pos, GetRange(_R), 1, Draw.Color(255, 255, 0, 0))
-		end			
+		end	
 end
