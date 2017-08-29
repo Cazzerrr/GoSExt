@@ -256,10 +256,10 @@ Config:MenuElement({type = MENU, name = "Combo Settings", id = "Combo"})
 Config.Combo:MenuElement({type = MENU, name = "Mark of the Assassin (Q)", id = "Q", leftIcon = "http://static.lolskill.net/img/abilities/64/AkaliMota.png"})
 Config.Combo.Q:MenuElement({name = "Enabled", id = "Enabled", value = true})
 
-Config.Combo:MenuElement({type = MENU, name = "Twilight Shroud (W)", id = "W", leftIcon = "http://static.lolskill.net/img/abilities/64/AkaliTwilightShroud.png"})
-Config.Combo.W:MenuElement({name = "Enabled", id = "Enabled", value = false})
+Config.Combo:MenuElement({type = MENU, name = "Twilight Shroud (W)", id = "W", leftIcon = "http://static.lolskill.net/img/abilities/64/AkaliSmokeBomb.png"})
+Config.Combo.W:MenuElement({name = "Enabled", id = "Enabled", value = true})
 
-Config.Combo:MenuElement({type = MENU, name = "Crescent Slash (E)", id = "E", leftIcon = "http://static.lolskill.net/img/abilities/64/AkaliCrescentSlash.png"})
+Config.Combo:MenuElement({type = MENU, name = "Crescent Slash (E)", id = "E", leftIcon = "http://static.lolskill.net/img/abilities/64/AkaliShadowSwipe.png"})
 Config.Combo.E:MenuElement({name = "Enabled", id = "Enabled", value = true})
 
 Config.Combo:MenuElement({type = MENU, name = "Shadow Dance (R)", id = "R", leftIcon = "http://static.lolskill.net/img/abilities/64/AkaliShadowDance.png"})
@@ -286,7 +286,7 @@ for _, Enemy in pairs(GetEnemyHeroes()) do
         Config.Harass.Q.Auto.WhiteList:MenuElement({name = Enemy.charName, id = Enemy.charName, value = true})
 end
 
-Config.Harass:MenuElement({type = MENU, name = "Crescent Slash (E)", id = "E", leftIcon = "http://static.lolskill.net/img/abilities/64/AkaliCrescentSlash.png"})
+Config.Harass:MenuElement({type = MENU, name = "Crescent Slash (E)", id = "E", leftIcon = "http://static.lolskill.net/img/abilities/64/AkaliShadowSwipe.png"})
 Config.Harass.E:MenuElement({name = "Enabled", id = "Enabled", value = true})
 
 Config.Harass:MenuElement({name = "Energy Manager", id = "Energy", value = 100, min = 0, max = 200, step = 5})
@@ -301,7 +301,7 @@ Config.LastHit.Q:MenuElement({type = MENU, name = "Auto Q Settings", id = "Auto"
 Config.LastHit.Q.Auto:MenuElement({name = "Enabled", id = "Enabled", value = false})
 Config.LastHit.Q.Auto:MenuElement({name = "Energy Manager", id = "Energy", value = 100, min = 0, max = 200, step = 5})
 
-Config.LastHit:MenuElement({type = MENU, name = "Crescent Slash (E)", id = "E", leftIcon = "http://static.lolskill.net/img/abilities/64/AkaliCrescentSlash.png"})
+Config.LastHit:MenuElement({type = MENU, name = "Crescent Slash (E)", id = "E", leftIcon = "http://static.lolskill.net/img/abilities/64/AkaliShadowSwipe.png"})
 Config.LastHit.E:MenuElement({name = "Enabled", id = "Enabled", value = true})
 
 Config.LastHit:MenuElement({name = "Energy Manager", id = "Energy", value = 100, min = 0, max = 200, step = 5})
